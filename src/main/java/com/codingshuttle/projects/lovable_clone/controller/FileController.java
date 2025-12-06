@@ -25,7 +25,7 @@ public class FileController {
         return ResponseEntity.ok(fileService.getFileTree(projectId, userId));
     }
 
-    @GetMapping("/{*path}")  // *path -> /src/folder.... (all values after the slash will be added in path)
+    @GetMapping("/{*path}")  // *path -> /src/hooks.... (all values after the slash will be added in path)
     public ResponseEntity<FileContentResponse> getFile(
             @PathVariable Long projectId,
             @PathVariable String path
