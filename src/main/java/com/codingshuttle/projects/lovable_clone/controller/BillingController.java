@@ -13,8 +13,8 @@ import java.util.List;
 @RequiredArgsConstructor
 public class BillingController {
 
-    private PlanService planService;
-    private SubscriptionService subscriptionService;
+    private final PlanService planService;
+    private final SubscriptionService subscriptionService;
 
     @GetMapping("/api/plans")
     public ResponseEntity<List<PlanResponse>> getAllPlans(){
